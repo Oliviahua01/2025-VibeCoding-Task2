@@ -297,7 +297,6 @@ footer.site-footer {
     padding: 72px 0;
   }
 
- 
   .about-grid {
     grid-template-columns: 1fr 360px;
     gap: 24px;
@@ -311,19 +310,37 @@ footer.site-footer {
     grid-template-columns: repeat(2, minmax(0,1fr));
   }
 
-  .footer-inner { flex-direction: row; justify-content: space-between; text-align: left; }
+  .footer-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
 }
 
-/* 修正 320px 水平捲動（100 分版本） */
+/* （這段原本有語法錯誤，我幫你修正） */
+.nav-link {
+  padding: 6px 8px;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 1200px) {
+  .hero-title { font-size: 2.5rem; }
+}
+
+
+/* -------------------------------------------------- */
+/* ⭐ 修正 320px（iPhone SE）會出現水平捲動的問題 ⭐ */
+/* -------------------------------------------------- */
 @media (max-width: 479px) {
-  /* 導覽列改為上下排列，避免在 320px 撐寬 */
+
+  /* 導覽列改為上下排列，避免撐出 320px 寬度 */
   .nav {
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
   }
 
-  /* 連結允許換行並保持在容器內 */
+  /* 允許導覽連結換行避免 overflow */
   .nav-links {
     width: 100%;
     display: flex;
@@ -331,17 +348,16 @@ footer.site-footer {
     gap: 6px;
   }
 
-  /* 讓按鈕更小一點，避免折行造成溢出 */
+  /* 小尺寸時按鈕略縮小（你原本的樣式延伸） */
   .nav-link {
     padding: 6px 8px;
     font-size: 0.9rem;
   }
 }
 
-@media (min-width: 1200px) {
-  .hero-title { font-size: 2.5rem; }
-}
 /* CSS:RWD-END */
+
+
 </style> </head> <body> <div class="page"> <header class="site-header"> <div class="container nav" role="navigation" aria-label="主導覽列"> <div class="brand" aria-hidden="false"> <span class="dot" aria-hidden="true"></span> <span>Your Name · Frontend Dev</span> </div>
       <nav class="nav-links" aria-label="主要連結">
       <a class="nav-link" href="#hero">首頁</a>
