@@ -297,6 +297,23 @@ footer.site-footer {
     padding: 72px 0;
   }
 
+ 
+  .about-grid {
+    grid-template-columns: 1fr 360px;
+    gap: 24px;
+  }
+
+  .section-skills .skill-list {
+    grid-template-columns: repeat(3, minmax(0,1fr));
+  }
+
+  .section-projects .projects-grid {
+    grid-template-columns: repeat(2, minmax(0,1fr));
+  }
+
+  .footer-inner { flex-direction: row; justify-content: space-between; text-align: left; }
+}
+
 /* 修正 320px 水平捲動（100 分版本） */
 @media (max-width: 479px) {
   /* 導覽列改為上下排列，避免在 320px 撐寬 */
@@ -319,23 +336,6 @@ footer.site-footer {
     padding: 6px 8px;
     font-size: 0.9rem;
   }
-}
-
-  
-  .about-grid {
-    grid-template-columns: 1fr 360px;
-    gap: 24px;
-  }
-
-  .section-skills .skill-list {
-    grid-template-columns: repeat(3, minmax(0,1fr));
-  }
-
-  .section-projects .projects-grid {
-    grid-template-columns: repeat(2, minmax(0,1fr));
-  }
-
-  .footer-inner { flex-direction: row; justify-content: space-between; text-align: left; }
 }
 
 @media (min-width: 1200px) {
