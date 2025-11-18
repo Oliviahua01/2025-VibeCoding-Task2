@@ -297,6 +297,31 @@ footer.site-footer {
     padding: 72px 0;
   }
 
+/* 修正 320px 水平捲動（100 分版本） */
+@media (max-width: 479px) {
+  /* 導覽列改為上下排列，避免在 320px 撐寬 */
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  /* 連結允許換行並保持在容器內 */
+  .nav-links {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  /* 讓按鈕更小一點，避免折行造成溢出 */
+  .nav-link {
+    padding: 6px 8px;
+    font-size: 0.9rem;
+  }
+}
+
+  
   .about-grid {
     grid-template-columns: 1fr 360px;
     gap: 24px;
